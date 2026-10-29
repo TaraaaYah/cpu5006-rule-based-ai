@@ -1,0 +1,14 @@
+HIERARCHICAL EXPERT SYSTEM
+Layer 1  price   : buying+maint points >=5 cheap; 3-4 fair; <=2 expensive (vhigh=0 ... low=3 each)
+Layer 1  comfort : persons=2 -> unsuitable; else points = persons rank (4 -> 1, more -> 2)
+                   + lug_boot rank (small 0, med 1, big 2) + min(doors rank, 2) (2 doors 0, 3 doors 1, 4+ 2);
+                   points >= 6 high; 4-5 medium; otherwise low
+Layer 2  tech    : safety low or comfort unsuitable -> unsafe; high safety & high comfort -> excellent;
+                   high safety & medium comfort -> good; safety>=med & comfort>=medium -> adequate; else poor
+Layer 3  (ordered, first match):
+   1. IF tech is unsafe/poor THEN unacc
+   2. IF price is expensive THEN unacc
+   3. IF price cheap AND tech excellent THEN vgood
+   4. IF price cheap AND tech good THEN good
+   5. IF price fair AND tech excellent THEN good
+   6. ELSE acc

@@ -1,0 +1,13 @@
+,0
+accuracy,0.7928
+macro_f1,0.4231
+kappa,0.4593
+ordinal_mae,0.2402
+recall_unacc,0.9917
+precision_unacc,0.8287
+recall_acc,0.4115
+precision_acc,0.7054
+recall_good,0.087
+precision_good,0.12
+recall_vgood,0.0923
+precision_vgood,1.0
