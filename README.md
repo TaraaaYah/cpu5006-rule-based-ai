@@ -26,6 +26,7 @@ Baseline: always predict the majority class. Neither algorithm learns from data;
 - `split.py` – the fixed 30% development / 70% test split (seed 42)
 - `develop_rules.py` – development-phase evaluation on the development cars only
 - `run_experiments.py` – final test evaluation, statistics and figures
+- `verify_rules.py` – independent re-implementation check of both algorithms and worked examples
 - `data/` – `car.data`, `car.names` (UCI Car Evaluation, Bohanec and Rajkovic)
 - `results/` – test results, comparisons, rule listings, error analysis and the rule development log
 - `figures/` – the four figures used in the paper
