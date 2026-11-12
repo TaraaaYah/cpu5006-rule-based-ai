@@ -1,25 +1,29 @@
 # CPU5006 Assessment 1 – Rule-based AI on the Car Evaluation dataset
 
-Compares two rule-based AI algorithms on the UCI Car Evaluation data (1,728 cars, 4 ordinal classes):
+Compares two hand-written rule-based AI systems on the UCI Car Evaluation data (1,728 cars, 4 ordinal classes):
 
-| Algorithm | Type | Learns from data? |
-|---|---|---|
-| **Hierarchical expert system** (`HierarchicalExpertSystem`) | Forward-chaining production system mirroring the documented PRICE / COMFORT / TECH concept hierarchy | No |
-| **CN2** (`CN2`) | Multi-class ordered IF-THEN rule-list induction (sequential covering, Laplace heuristic, likelihood-ratio test, ordinal selectors), written from scratch | Yes |
+| Algorithm | Description |
+|---|---|
+| **Algorithm 1** (`IfThenRuleList`) | A flat, ordered list of IF-THEN rules; the first matching rule decides. |
+| **Algorithm 2** (`WeightedScoring`) | A points-based scoring system with explicit veto rules and class thresholds. |
 
-Baselines: majority class and 1R.
+Baseline: always predict the majority class. Neither algorithm learns from data; every rule and point value is written by hand.
+
+## Status: development phase
+- The rules were refined on a 30% development split (`split.py`, `develop_rules.py`); see `results/rule_development_log.md`.
+- The 70% test split has not been used yet. The final evaluation script and results will be added once the rules are frozen.
+
+## Files
+- `rb_car.py` – both algorithms, the baseline, data loading and metrics
+- `split.py` – the fixed 30% development / 70% test split (seed 42)
+- `develop_rules.py` – development-phase evaluation on the development cars only
+- `data/` – `car.data`, `car.names` (UCI Car Evaluation, Bohanec and Rajkovic)
+- `results/rule_development_log.md` – version history of the rules
 
 ## Run
 ```bash
 pip install -r requirements.txt
-python run_experiments.py      # about 1 minute; writes results/ and figures/
+python develop_rules.py
 ```
-
-## Files
-- `rb_car.py` – algorithms, data loading, metrics (no ML library used for the models)
-- `run_experiments.py` – repeated 5-fold CV (x10), significance tests, learning curve, CN2 ablation, figures
-- `data/` – `car.data`, `car.names` (UCI Car Evaluation, Bohanec & Rajkovic)
-- `results/` – fold-level results, summaries, confusion matrices, rule listings, expert error examples
-- `figures/` – figures for the paper
 
 AI-tool use is disclosed in the header of each Python file, as required by the assessment brief.
