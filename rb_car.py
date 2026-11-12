@@ -13,11 +13,15 @@ CPU5006 Artificial Intelligence, Assessment 1 (Rule-Based AI Experiments).
 Neither algorithm learns from data: every rule, point value and threshold is
 written by hand and can be read and changed in this file.
 
-AI TOOL DISCLOSURE (required by the assessment brief):
-  This code was developed with the assistance of Claude (Anthropic, model
-  Sonnet 5.5) in November 2026. Claude produced the first draft of the rules,
-  implementation and experiment harness; I reviewed, ran and adapted it. Update
-  this note with exactly what you changed or checked before submitting.
+AI TOOL DISCLOSURE (required by the assessment brief)
+  Tool: Claude (Anthropic, model Sonnet 5.5), used in November 2026.
+  What Claude did: wrote the first drafts of the rules, the code in this file and the experiment
+  scripts, and refined the rules after reading error tables on the development cars only.
+  What I (the author) decided: the dataset, the comparison of two hand-written rule-based
+  designs, the 30/70 development/test split, and that the rules were frozen before the single
+  test run. My own checks and changes are described in Section 3.7 of the paper.
+  Claude had seen results for the whole dataset earlier in the project, so the rules are
+  informed by prior knowledge of the data (see the limitations in the paper).
 
 Only numpy / pandas are used. No machine-learning library is used.
 """

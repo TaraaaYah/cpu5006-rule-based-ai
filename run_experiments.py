@@ -5,8 +5,14 @@ Run this only after the rules in rb_car.py are frozen. It reproduces every numbe
 Usage:  python run_experiments.py      (takes a few seconds)
 Outputs: results/*.csv, results/*.txt, figures/*.png
 
-AI TOOL DISCLOSURE: drafted with assistance from Claude (Anthropic, Sonnet 5.5), November 2026;
-reviewed and run by the student. See the note in rb_car.py.
+AI TOOL DISCLOSURE (required by the assessment brief)
+  Tool: Claude (Anthropic, model Sonnet 5.5), used in November 2026.
+  What Claude did: wrote the first drafts of the rules, this script and the other code, and refined the rules after reading error tables on the development cars only.
+  What I (the author) decided: the dataset, the comparison of two hand-written rule-based
+  designs, the 30/70 development/test split, and that the rules were frozen before the single
+  test run. My own checks and changes are described in Section 3.7 of the paper.
+  Claude had seen results for the whole dataset earlier in the project, so the rules are
+  informed by prior knowledge of the data (see the limitations in the paper).
 """
 import os
 import numpy as np
