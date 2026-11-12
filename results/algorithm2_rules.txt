@@ -1,0 +1,17 @@
+ALGORITHM 2: WEIGHTED SCORING WITH DECISION RULES
+Points per attribute level:
+  buying   vhigh=0, high=2, med=4, low=6
+  maint    vhigh=0, high=2, med=4, low=6
+  doors    2=0, 3=1, 4=2, 5more=2
+  persons  2=0, 4=2, more=3
+  lug_boot small=0, med=1, big=2
+  safety   low=0, med=2, high=5
+Maximum possible score = 24
+Decision rule 1 (veto): IF any of these holds THEN unacc
+    - persons is 2   # A two-seater cannot carry a family
+    - safety is low   # Low safety is never acceptable
+Decision rule 2: otherwise use score as a share of the maximum:
+    score >= 86% of maximum -> vgood
+    score >= 78% of maximum -> good
+    score >= 54% of maximum -> acc
+    below that -> unacc

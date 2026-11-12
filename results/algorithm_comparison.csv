@@ -1,0 +1,10 @@
+,0
+A1_right_A2_wrong,91.0
+A1_wrong_A2_right,74.0
+mcnemar_exact_p,0.2128
+accuracy_diff_A1_minus_A2,0.014
+accuracy_diff_lo,-0.0066
+accuracy_diff_hi,0.0347
+macro_f1_diff_A1_minus_A2,0.107
+macro_f1_diff_lo,0.0384
+macro_f1_diff_hi,0.172

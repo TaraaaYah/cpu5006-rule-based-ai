@@ -1,0 +1,11 @@
+ALGORITHM 1: ORDERED IF-THEN RULE LIST (first matching rule fires)
+ 1. IF persons is 2 THEN unacc   # A two-seater cannot carry a family
+ 2. IF safety is low THEN unacc   # Low safety is never acceptable
+ 3. IF buying is vhigh AND maint is at most high THEN unacc   # Very high price plus high running costs
+ 4. IF maint is vhigh AND buying is at most high THEN unacc   # Very high running costs plus a high price
+ 5. IF safety is med AND buying is high AND lug_boot is at most med THEN unacc   # Medium safety, a high price and limited boot space
+ 6. IF safety is high AND lug_boot is at least med AND buying is at least med AND maint is at least med THEN vgood   # Safest, roomy boot, cheap to buy and run
+ 7. IF safety is high AND buying is low AND maint is high AND lug_boot is at least med THEN vgood   # Safest, roomy boot, cheapest to buy
+ 8. IF safety is high AND buying is at least med AND maint is at least med THEN good   # Safest and cheap to buy and run
+ 9. IF safety is med AND buying is low AND maint is low THEN good   # Medium safety but the cheapest to buy and run
+10. OTHERWISE acc

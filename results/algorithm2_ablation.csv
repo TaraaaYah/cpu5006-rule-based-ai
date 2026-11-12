@@ -1,0 +1,4 @@
+variant,accuracy,macro_f1,kappa,ordinal_mae
+Algorithm 2 (full),0.895,0.6888,0.7692,0.1116
+Without veto rules,0.7207,0.5857,0.4824,0.2959
+"Equal weights, with veto",0.8529,0.5613,0.6643,0.1661

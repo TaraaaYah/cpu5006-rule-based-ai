@@ -1,0 +1,11 @@
+rule,predicts,fires,correct,accuracy
+1,unacc,394,394,1.0
+2,unacc,267,267,1.0
+3,unacc,75,75,1.0
+4,unacc,32,32,1.0
+5,unacc,31,22,0.71
+6,vgood,48,38,0.792
+7,vgood,9,8,0.889
+8,good,23,16,0.696
+9,good,17,6,0.353
+10,acc,314,242,0.771

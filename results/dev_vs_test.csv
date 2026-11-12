@@ -1,0 +1,7 @@
+model,metric,development,test,drop
+Algorithm 1: IF-THEN rules,accuracy,0.9305,0.9091,0.0214
+Algorithm 1: IF-THEN rules,macro_f1,0.8464,0.7958,0.0506
+Algorithm 1: IF-THEN rules,kappa,0.8507,0.8094,0.0413
+Algorithm 2: weighted scoring,accuracy,0.8977,0.895,0.0026
+Algorithm 2: weighted scoring,macro_f1,0.7001,0.6888,0.0113
+Algorithm 2: weighted scoring,kappa,0.7732,0.7692,0.004

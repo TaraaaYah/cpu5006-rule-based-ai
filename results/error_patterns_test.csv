@@ -1,0 +1,16 @@
+model,true,predicted,cars
+Algorithm 1: IF-THEN rules,unacc,acc,53
+Algorithm 1: IF-THEN rules,good,acc,19
+Algorithm 1: IF-THEN rules,acc,good,14
+Algorithm 1: IF-THEN rules,acc,unacc,9
+Algorithm 1: IF-THEN rules,good,vgood,7
+Algorithm 1: IF-THEN rules,acc,vgood,4
+Algorithm 1: IF-THEN rules,unacc,good,4
+Algorithm 2: weighted scoring,acc,unacc,33
+Algorithm 2: weighted scoring,unacc,acc,33
+Algorithm 2: weighted scoring,good,acc,21
+Algorithm 2: weighted scoring,vgood,good,19
+Algorithm 2: weighted scoring,vgood,acc,7
+Algorithm 2: weighted scoring,good,vgood,7
+Algorithm 2: weighted scoring,acc,good,6
+Algorithm 2: weighted scoring,unacc,good,1
